@@ -1,0 +1,9 @@
+.git*
+.github
+.vscode
+out
+.editorconfig
+.env
+.eslint*
+LICENSE
+README.md
