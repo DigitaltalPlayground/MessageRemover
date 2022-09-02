@@ -32,7 +32,7 @@ async function task(channel: TextBasedChannel) {
     const messages = await channel.messages.fetch({
         limit: 100,
         cache: false,
-        before: SnowflakeUtil.generate({ timestamp: DateTime.now().setZone('Asia/Tokyo').minus({ day: 1, hour: 1 }).toMillis() }).toString(),
+        before: SnowflakeUtil.generate({ timestamp: DateTime.now().setZone('Asia/Tokyo').minus({ hour: 23 }).toMillis() }).toString(),
     });
     messages.forEach(message => {
         setTimeout(() => {
