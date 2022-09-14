@@ -1,7 +1,6 @@
-import type { TextBasedChannel } from 'discord.js';
 import { error, log } from 'console';
 import { env, exit } from 'process';
-import { Client, Partials, SnowflakeUtil } from 'discord.js';
+import { Client, Partials, SnowflakeUtil, TextChannel } from 'discord.js';
 import { DateTime, Interval } from 'luxon';
 
 const { WATCH_CHANNEL } = env;
@@ -13,8 +12,8 @@ new Client({ intents: ['Guilds'], partials: [Partials.GuildMember] })
             error('No channel found');
             exit(1);
         }
-        if (!channel.isTextBased()) {
-            error('Not a text based channel');
+        if (!(channel instanceof TextChannel)) {
+            error('Select TextChannel');
             exit(1);
         }
 
@@ -28,15 +27,17 @@ new Client({ intents: ['Guilds'], partials: [Partials.GuildMember] })
     })
     .login();
 
-async function task(channel: TextBasedChannel) {
+async function task(channel: TextChannel) {
     const messages = await channel.messages.fetch({
         limit: 100,
         cache: false,
         before: SnowflakeUtil.generate({ timestamp: DateTime.now().setZone('Asia/Tokyo').minus({ hour: 23 }).toMillis() }).toString(),
     });
-    messages.forEach(message => {
-        setTimeout(() => {
-            message.delete().catch(console.error);
-        }, Interval.fromDateTimes(DateTime.now(), DateTime.fromJSDate(message.createdAt).plus({ day: 1 })).toDuration('millisecond').milliseconds);
-    });
+    messages
+        .filter(message => !message.pinned)
+        .forEach(message => {
+            setTimeout(() => {
+                message.delete().catch(console.error);
+            }, Interval.fromDateTimes(DateTime.now(), DateTime.fromJSDate(message.createdAt).plus({ day: 1 })).toDuration('millisecond').milliseconds);
+        });
 }
