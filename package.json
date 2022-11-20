@@ -8,25 +8,25 @@
     "lint": "eslint --fix .",
     "sdk": "yarn dlx @yarnpkg/sdks"
   },
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "yarn@3.3.0",
   "dependencies": {
-    "bufferutil": "^4.0.6",
-    "discord.js": "^14.3.0",
-    "luxon": "^3.0.3",
-    "utf-8-validate": "^5.0.9"
+    "bufferutil": "^4.0.7",
+    "discord.js": "^14.6.0",
+    "luxon": "^3.1.0",
+    "utf-8-validate": "^5.0.10"
   },
   "devDependencies": {
-    "@types/luxon": "^3.0.1",
-    "@types/node": "^18.7.18",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
-    "dotenv": "^16.0.2",
-    "esbuild": "^0.15.7",
+    "@types/luxon": "^3.1.0",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.15.14",
     "esbuild-node-externals": "^1.5.0",
-    "eslint": "^8.23.1",
+    "eslint": "^8.28.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-plugin-import": "^2.26.0",
-    "nodemon": "^2.0.19",
-    "typescript": "^4.8.3"
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.3"
   }
 }
