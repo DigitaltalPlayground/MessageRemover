@@ -36,7 +36,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["discord.js", "npm:14.9.0"],\
             ["dotenv", "npm:16.0.3"],\
             ["esbuild", "npm:0.17.18"],\
-            ["esbuild-node-externals", "virtual:5388821825b719f941b8e42a2c9168cf58ecb27933e1e5560d2941f9ab8917367de786c4ca088715501eab1063d54dbb7c8a4ec8ea4dd476c2befd00f8a66f70#npm:1.7.0"],\
             ["eslint", "npm:8.39.0"],\
             ["eslint-import-resolver-node", "npm:0.3.7"],\
             ["eslint-plugin-import", "virtual:5388821825b719f941b8e42a2c9168cf58ecb27933e1e5560d2941f9ab8917367de786c4ca088715501eab1063d54dbb7c8a4ec8ea4dd476c2befd00f8a66f70#npm:2.27.5"],\
@@ -1460,30 +1459,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["esbuild-node-externals", [\
-        ["npm:1.7.0", {\
-          "packageLocation": "./.yarn/cache/esbuild-node-externals-npm-1.7.0-54240779b2-240f33aafd.zip/node_modules/esbuild-node-externals/",\
-          "packageDependencies": [\
-            ["esbuild-node-externals", "npm:1.7.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:5388821825b719f941b8e42a2c9168cf58ecb27933e1e5560d2941f9ab8917367de786c4ca088715501eab1063d54dbb7c8a4ec8ea4dd476c2befd00f8a66f70#npm:1.7.0", {\
-          "packageLocation": "./.yarn/__virtual__/esbuild-node-externals-virtual-05d353918b/0/cache/esbuild-node-externals-npm-1.7.0-54240779b2-240f33aafd.zip/node_modules/esbuild-node-externals/",\
-          "packageDependencies": [\
-            ["esbuild-node-externals", "virtual:5388821825b719f941b8e42a2c9168cf58ecb27933e1e5560d2941f9ab8917367de786c4ca088715501eab1063d54dbb7c8a4ec8ea4dd476c2befd00f8a66f70#npm:1.7.0"],\
-            ["@types/esbuild", null],\
-            ["esbuild", "npm:0.17.18"],\
-            ["find-up", "npm:5.0.0"],\
-            ["tslib", "npm:2.5.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/esbuild",\
-            "esbuild"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["escape-string-regexp", [\
         ["npm:4.0.0", {\
           "packageLocation": "./.yarn/cache/escape-string-regexp-npm-4.0.0-4b531d8d59-98b48897d9.zip/node_modules/escape-string-regexp/",\
@@ -2644,7 +2619,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["discord.js", "npm:14.9.0"],\
             ["dotenv", "npm:16.0.3"],\
             ["esbuild", "npm:0.17.18"],\
-            ["esbuild-node-externals", "virtual:5388821825b719f941b8e42a2c9168cf58ecb27933e1e5560d2941f9ab8917367de786c4ca088715501eab1063d54dbb7c8a4ec8ea4dd476c2befd00f8a66f70#npm:1.7.0"],\
             ["eslint", "npm:8.39.0"],\
             ["eslint-import-resolver-node", "npm:0.3.7"],\
             ["eslint-plugin-import", "virtual:5388821825b719f941b8e42a2c9168cf58ecb27933e1e5560d2941f9ab8917367de786c4ca088715501eab1063d54dbb7c8a4ec8ea4dd476c2befd00f8a66f70#npm:2.27.5"],\
