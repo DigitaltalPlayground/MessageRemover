@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { build } from 'esbuild';
-import { nodeExternalsPlugin } from 'esbuild-node-externals';
 import { join } from 'path';
 import { cwd } from 'process';
+import { build } from 'esbuild';
+import { nodeExternalsPlugin } from 'esbuild-node-externals';
 
 build({
     entryPoints: [join(cwd(), 'src', 'index.ts')],
