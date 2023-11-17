@@ -1,8 +1,8 @@
 FROM node:lts-bullseye-slim AS base
 WORKDIR /app
-COPY .yarnrc.yml ./
-COPY .yarn/ ./.yarn
-COPY .pnp* package.json yarn.lock ./
+COPY --link .yarnrc.yml ./
+COPY --link .yarn/ ./.yarn
+COPY --link .pnp* package.json yarn.lock ./
 
 FROM base AS builder
 RUN apt-get update && \
@@ -10,7 +10,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends python3 g++ make
 WORKDIR /app
 RUN yarn rebuild
-COPY . .
+COPY --link . .
 RUN chmod +x build.js
 RUN yarn node ./build.js
 
